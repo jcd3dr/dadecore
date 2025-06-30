@@ -41,7 +41,21 @@ if ( ! function_exists( 'dadecore_theme_setup' ) ) :
 		 *
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
-		add_theme_support( 'post-thumbnails' );
+               add_theme_support( 'post-thumbnails' );
+
+               // Gutenberg and block editor features
+               add_theme_support( 'wp-block-styles' );
+               add_theme_support( 'align-wide' );
+               add_theme_support( 'editor-styles' );
+               add_editor_style( 'assets/css/main.css' );
+
+               // Soporte para logo personalizado
+               add_theme_support( 'custom-logo', array(
+                       'height'      => 80,
+                       'width'       => 200,
+                       'flex-height' => true,
+                       'flex-width'  => true,
+               ) );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
@@ -91,5 +105,6 @@ function dadecore_theme_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'dadecore_theme_scripts' );
 
-// Incluir el archivo de funciones del customizer si lo creamos más adelante.
-// require get_template_directory() . '/inc/customizer.php';
+// Incluir módulos adicionales
+require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/inc/security.php';
