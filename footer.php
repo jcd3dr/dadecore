@@ -11,7 +11,14 @@
             /* translators: 1: Theme name, 2: Theme author. */
             printf( esc_html__( 'Theme: %1$s by %2$s.', 'dadecore-theme' ), 'DadeCore Theme', '<a href="https://www.dadecore.com/">DadeCore Bizz LLC</a>' );
             ?>
-        </div></footer></div><?php wp_footer(); ?>
+        </div>
+    </footer>
+    <div class="cookie-banner">
+        <p><?php esc_html_e( 'We use cookies to improve your experience.', 'dadecore-theme' ); ?></p>
+        <button class="cookie-accept"><?php esc_html_e( 'Accept', 'dadecore-theme' ); ?></button>
+    </div>
+    </div>
+<?php wp_footer(); ?>
 
 </body>
 </html>

@@ -946,3 +946,31 @@ img {
         font-size: 0.9em;
     }
 }
+
+/* Cookie banner */
+.cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: var(--glass-background);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(var(--glass-backdrop-blur));
+    padding: 15px;
+    border-radius: 8px;
+    display: none;
+    z-index: 9999;
+}
+
+.cookie-banner p {
+    margin-bottom: 10px;
+}
+
+.cookie-banner button {
+    background: var(--color-green-tech);
+    color: var(--color-dark-blue);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
