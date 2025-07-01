@@ -3,9 +3,9 @@
  * Basic security enhancements for DadeCore Theme.
  */
 
-// Custom login slug functionality
+// Custom login slug functionality based on option value
 function dadecore_custom_login_slug() {
-    $slug = get_theme_mod( 'login_slug', 'login' );
+    $slug = get_option( 'dadecore_login_slug', 'login' );
     if ( 'login' !== $slug ) {
         add_rewrite_rule( "^{$slug}/?", 'wp-login.php', 'top' );
     }
@@ -17,10 +17,15 @@ function dadecore_limit_login_attempts( $user, $username, $password ) {
     $ip = $_SERVER['REMOTE_ADDR'];
     $key = 'dadecore_login_' . md5( $ip );
     $attempts = (int) get_transient( $key );
-    if ( $attempts >= 5 ) {
+
+    $max_attempts    = (int) get_option( 'dadecore_max_login_attempts', 5 );
+    $lockout_minutes = (int) get_option( 'dadecore_login_lockout_minutes', 15 );
+
+    if ( $attempts >= $max_attempts ) {
         wp_die( __( 'Too many login attempts. Try again later.', 'dadecore-theme' ) );
     }
-    set_transient( $key, $attempts + 1, 15 * MINUTE_IN_SECONDS );
+
+    set_transient( $key, $attempts + 1, $lockout_minutes * MINUTE_IN_SECONDS );
     return $user;
 }
 add_filter( 'authenticate', 'dadecore_limit_login_attempts', 30, 3 );
