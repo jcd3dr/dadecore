@@ -1,0 +1,59 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-01 03:07+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: inc/integrations.php:18 inc/integrations.php:19 inc/integrations.php:31
+msgid "Integraciones"
+msgstr ""
+
+#: inc/integrations.php:36
+msgid "Google Tag Manager &lt;head&gt; code"
+msgstr ""
+
+#: inc/integrations.php:42
+msgid "Google Tag Manager &lt;body&gt; code"
+msgstr ""
+
+#: inc/security-settings.php:31 inc/security-settings.php:32
+#: inc/security-settings.php:52
+msgid "Seguridad Login"
+msgstr ""
+
+#: inc/security-settings.php:59
+msgid "Slug personalizado para login"
+msgstr ""
+
+#: inc/security-settings.php:63
+msgid "Máx. intentos fallidos"
+msgstr ""
+
+#: inc/security-settings.php:67
+msgid "Tiempo de bloqueo (minutos)"
+msgstr ""
+
+#: inc/security-settings.php:71
+msgid "Ocultar wp-login.php"
+msgstr ""
+
+#: inc/security-settings.php:75
+msgid "Proteger wp-admin"
+msgstr ""
+
+#: inc/security.php:52
+msgid "Too many login attempts. Try again later."
+msgstr ""

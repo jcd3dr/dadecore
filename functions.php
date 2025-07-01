@@ -4,6 +4,7 @@
  */
 
 function dadecore_setup() {
+    load_theme_textdomain( 'dadecore-theme', get_template_directory() . '/languages' );
     add_theme_support( 'wp-block-styles' );
     add_theme_support( 'editor-styles' );
     add_theme_support( 'block-templates' );
