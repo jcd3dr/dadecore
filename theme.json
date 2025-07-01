@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "settings": {
+    "color": {
+      "palette": [
+        {"name": "Dark Blue", "slug": "dark-blue", "color": "#0A1128"},
+        {"name": "Green Tech", "slug": "green-tech", "color": "#00FFC2"},
+        {"name": "Gray Light", "slug": "gray-light", "color": "#F0F2F5"},
+        {"name": "White", "slug": "white", "color": "#FFFFFF"}
+      ]
+    },
+    "typography": {
+      "fontFamilies": [
+        {"fontFamily": "Inter, sans-serif", "name": "Inter", "slug": "inter"},
+        {"fontFamily": "Poppins, sans-serif", "name": "Poppins", "slug": "poppins"}
+      ]
+    },
+    "spacing": {
+      "customSpacingSize": true,
+      "spacingScale": {
+        "steps": 1,
+        "medium": "1rem"
+      }
+    }
+  },
+  "templateParts": [
+    {"name": "Header", "slug": "header", "area": "header"},
+    {"name": "Footer", "slug": "footer", "area": "footer"}
+  ]
+}

@@ -1,0 +1,29 @@
+<!-- wp:template-part {"slug":"header"} /-->
+
+<!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
+<main class="wp-block-group"><!-- wp:group {"tagName":"section","className":"blog-archive-container section-padding","layout":{"type":"constrained"}} -->
+<section class="wp-block-group blog-archive-container section-padding"><!-- wp:heading {"level":1,"className":"section-title"} -->
+<h1 class="section-title">Blog</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"className":"section-subtitle"} -->
+<p class="section-subtitle">Explora nuestras últimas publicaciones y recursos.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:query {"query":{"postType":"post","perPage":6},"displayLayout":{"type":"list"},"className":"blog-posts-grid"} -->
+<div class="wp-block-query blog-posts-grid"><!-- wp:post-template -->
+<!-- wp:post-featured-image {"isLink":true,"height":"200px"} /-->
+
+<!-- wp:post-title {"isLink":true,"level":3,"className":"entry-title"} /-->
+
+<!-- wp:post-excerpt /-->
+
+<!-- wp:read-more {"className":"read-more-btn"} /-->
+<!-- /wp:post-template -->
+
+<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"}} /-->
+<!-- /wp:query --></section>
+<!-- /wp:group --></main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer"} /-->
