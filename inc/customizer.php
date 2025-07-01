@@ -39,3 +39,13 @@ function dadecore_customizer_css() {
     echo '<style type="text/css">:root{--color-green-tech:' . esc_attr( $accent ) . ';}</style>';
 }
 add_action( 'wp_head', 'dadecore_customizer_css' );
+
+// Sync login slug from Customizer to option on save
+function dadecore_customizer_save_login_slug( $manager ) {
+    $slug = $manager->get_setting( 'login_slug' )->value();
+    if ( $slug ) {
+        update_option( 'dadecore_login_slug', sanitize_title_with_dashes( $slug ) );
+        flush_rewrite_rules();
+    }
+}
+add_action( 'customize_save_after', 'dadecore_customizer_save_login_slug' );
