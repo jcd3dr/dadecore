@@ -3,24 +3,14 @@
  * Basic security enhancements for DadeCore Theme.
  */
 
-// Custom login slug functionality based on option value or Customizer setting
+// Custom login slug functionality based on option value
 function dadecore_custom_login_slug() {
-    $slug = get_option( 'dadecore_login_slug', '' );
-    if ( ! $slug ) {
-        $slug = get_theme_mod( 'login_slug', 'login' );
-    }
+    $slug = get_option( 'dadecore_login_slug', 'login' );
     if ( 'login' !== $slug ) {
         add_rewrite_rule( "^{$slug}/?", 'wp-login.php', 'top' );
     }
 }
 add_action( 'init', 'dadecore_custom_login_slug' );
-
-// Keep option and Customizer in sync
-function dadecore_sync_login_slug( $value ) {
-    update_option( 'dadecore_login_slug', sanitize_title_with_dashes( $value ) );
-    return $value;
-}
-add_filter( 'pre_update_option_login_slug', 'dadecore_sync_login_slug' );
 
 // Redirect from default login page if hidden
 function dadecore_redirect_default_login() {
