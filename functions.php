@@ -109,3 +109,4 @@ add_action( 'wp_enqueue_scripts', 'dadecore_theme_scripts' );
 require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/security.php';
 require get_template_directory() . '/inc/security-settings.php';
+require get_template_directory() . '/inc/integrations.php';
