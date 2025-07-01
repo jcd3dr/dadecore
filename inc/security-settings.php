@@ -44,7 +44,6 @@ function dadecore_flush_rewrite_rules( $old_value, $value, $option ) {
     }
 }
 add_action( 'update_option_dadecore_login_slug', 'dadecore_flush_rewrite_rules', 10, 3 );
-add_action( 'update_option_login_slug', 'dadecore_flush_rewrite_rules', 10, 3 );
 
 // Render settings page.
 function dadecore_security_settings_page() {
